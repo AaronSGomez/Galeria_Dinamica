@@ -1,0 +1,20 @@
+https://www.printables.com/model/1185570-minipc-wall-mount
+https://www.printables.com/model/241744-star-wars-bd-1-droid-kit-card-individual-parts 
+https://www.printables.com/model/610617-r2-d2-aus-star-wars
+https://www.printables.com/model/392559-star-wars-toilet-sign
+https://www.printables.com/model/456347-mandalorian-mythosaur
+https://www.printables.com/model/527750-star-wars-the-mandalorian-full-costumecosplay-helm
+https://www.printables.com/model/421312-ahsoka-tanos-lightsabers-star-wars-the-mandalorian
+https://www.printables.com/model/104677-how-to-print-the-mandalorian-helmet-size-s-m-l-and/comments
+https://www.printables.com/model/199721-cal-kestis-fallen-order-lightsaber-xenopixel-compa
+https://www.printables.com/model/494842-darth-vader-melted-mask-star-wars-pot-plant
+https://www.printables.com/model/964784-fv01-the-most-advanced-3d-printed-rc-formula-1-car
+https://www.printables.com/model/1150954-sm-33-head-star-wars-skeleton-crew
+https://www.printables.com/model/1178180-the-goonies-magnet-multi-color8x3mm-magnets
+
+printables 
+
+background #18191a
+footer #000000
+section #1c1e21
+resaltados #eb6f40 (botones etc)
