@@ -1,12 +1,3 @@
-:root{
-  a{
-    text-decoration: none;
-    color: var(--primary-color);
-  }
-  a:visited{
-    text-decoration: none;
-  }
-}
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
 .delius-regular {
   font-family: 'Delius', serif;
@@ -25,6 +16,13 @@
   margin: 0;
   padding: 0;
   background-color: #1c1e21;
+  a{
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  a:visited{
+    text-decoration: none;
+  }
 }
 h2 {
   text-transform: uppercase;
@@ -136,6 +134,9 @@ nav > ul > li {
   text-shadow: 2px 3px 5px #eb6f40;
   cursor: pointer;
 }
+nav > ul > li >a{
+  font-size: 18px;
+}
 nav > ul > li > a:hover {
   text-shadow: 2px 3px 10px #fcd5c8;
   cursor: pointer;
@@ -211,32 +212,46 @@ article {
   grid-template-rows: auto;
   list-style: none;
   padding: 20px;
-  margin: 0;
   gap: var(--spacing);
 }
 .gallery > li > img {
   max-width: 280px;
   max-height: 280px;
   object-fit: cover;
-  border-radius: 1px;
+  border-radius: 2px;
+  align-self: center;
+  justify-self: center;
 }
 .gallery > li {
   display: grid;
-  grid-template-columns: auto;
   grid-template-rows: repeat(auto-fill, minmax(240px, 1fr));
-  align-items: center;
-  justify-items: center;
   padding: 0px;
   border: 1px solid var(--border-color);
   border-radius: 2px;
   background: var(--terciary-color);
   color: var(--primary-color);
-  text-align: center;
   font-size: 15px;
   font-variant: small-caps;
   text-shadow: 2px 3px 5px #eb6f40;
   cursor: pointer;
   overflow: hidden; /* oculta el exceso de imagen */
+  
+}
+.gallery > li > a {
+  width: 95%;
+  height: 90%;
+}
+.gallery > li > a > h4 {
+  font-size: 15px;
+  width: 90%;
+  padding-left: 8px;
+  font-variant: small-caps;
+  color: var(--primary-color);
+  cursor: pointer;
+  align-self: flex-start;
+  justify-content: flex-start;
+
+  
 }
 /*  pie de pagina */
 footer {

@@ -66,6 +66,8 @@ const products = [
     image: './assets/img/goo.webp'
   }
 ];
+
+/* GALERIA */
 const gallery = document.querySelector('.modelos');
 const ul= document.createElement('ul');
 gallery.appendChild(ul);
@@ -77,21 +79,7 @@ for(let product of products){
   `;
   ul.appendChild(li);
 }
-/* 
-<ul>
-                    <li><h2>Categorias</h2></li>
-                    <li><a src="#">Arquitectura</a></li>
-                    <li><a src="#">Arte</a></li>
-                    <li><a src="#">Robotica</a></li>
-                    <li><a src="#">Electrónica</a></li>
-                    <li><a src="#">Juegos</a></li>
-                    <li><a src="#">Juguetes</a></li>
-                    <li><a src="#">Biologia</a></li>
-                    <li><a src="#">Matematicas</a></li>
-                    <li><a src="#">Oficina</a></li>
-                    <li><a src="#">Varios</a></li>
-                </ul> */
-
+/* NAV */
 const menuCategorias = ["Arquitectura", "Arte", "Robotica", "Electrónica", "Juegos", "Juguetes", "Biologia", "Matematicas", "Oficina", "Varios"];
 const menu = document.querySelector('.navegador');
 const ulMenu= document.createElement('ul');
@@ -104,19 +92,10 @@ ulMenu.appendChild(liMenuH2);
 for(let categoria of menuCategorias){
   const liMenu=document.createElement('li');
   liMenu.innerHTML+=`
-  <a src="#">${categoria}</a>`
+  <a href="#">${categoria}</a>`
   ulMenu.appendChild(liMenu);
 }
-
-/* 
-                <ul>
-          <li><a src="#">Modelos 3D</a></li>
-          <li><a src="#">Tienda</a></li>
-          <li><a src="#">Educación</a></li>
-          <li><a src="#">Marcas</a></li>
-          <li><a src="#">Comunidad</a></li>
-          <li><a src="#">Eventos</a></li>
-        </ul> */
+/* MENU */
 const nav= document.querySelector('nav');
 const ulNav= document.createElement('ul');
 nav.appendChild(ulNav);
@@ -126,12 +105,8 @@ for(let n of menuNav){
   liNav.innerHTML+=`<a href="#">${n}</a>`;
   ulNav.appendChild(liNav);
 }
-/* 
-<ul class="social">
-<li><a src="#"><img src="./assets/ico/linkedin.png"></a></li>
-<li><a src="#"><img src="./assets/ico/instagram.png"></a></li>
-<li><a src="#"><img src="./assets/ico/facebook.png"></a></li>
-</ul> */
+
+/* RSS */
 const footer=document.querySelector('footer');
 const ulSocial= document.createElement('ul');
 ulSocial.className='social';
