@@ -141,3 +141,20 @@ for(let s in social){
   <a href="${social[s].src}" target="_blank" rel="noopener noreferrer"><img src="${social[s].ico}"></a>`;
   ulSocial.appendChild(liSocial);
 }
+
+/* <div class="buscar">
+            <button class= "btn"><img src="./assets/img/lupa.png" /></button>
+            <input type="text" class="search" placeholder="Buscar..." />
+          </div> */
+          /* hay que crear una funcion mostrar elementos a la que pasar un array de products que contengan la palabra de busqueda y pintarlos en la galeria */
+const search=document.querySelector('.search');
+const btn=document.querySelector('.btn');
+let searchValue='';
+btn.addEventListener('click',()=>{
+  searchValue= search.value;
+  console.log(search.value);
+});
+
+
+
+
