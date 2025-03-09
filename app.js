@@ -2,7 +2,7 @@ const products = [
   {
     name: 'MiniPc wall mount',
     src: 'https://www.printables.com/model/1185570-minipc-wall-mount',
-    image: './assets/img/1.jpg'
+    image: './assets/img/2.jpg'
   },
   {
     name: 'Star Wars BD-1 Droid Kit',
@@ -66,8 +66,103 @@ const products = [
     image: './assets/img/goo.webp'
   }
 ];
+const gallery = document.querySelector('.modelos');
+const ul= document.createElement('ul');
+gallery.appendChild(ul);
+ul.classList.add('gallery');
+for(let product of products){
+  const li= document.createElement('li');
+  li.innerHTML +=`
+  <img src="${product.image}"><a href="${product.src}" rel="noopener"><h4>${product.name}</h4></a>
+  `;
+  ul.appendChild(li);
+}
+/* 
+<ul>
+                    <li><h2>Categorias</h2></li>
+                    <li><a src="#">Arquitectura</a></li>
+                    <li><a src="#">Arte</a></li>
+                    <li><a src="#">Robotica</a></li>
+                    <li><a src="#">Electrónica</a></li>
+                    <li><a src="#">Juegos</a></li>
+                    <li><a src="#">Juguetes</a></li>
+                    <li><a src="#">Biologia</a></li>
+                    <li><a src="#">Matematicas</a></li>
+                    <li><a src="#">Oficina</a></li>
+                    <li><a src="#">Varios</a></li>
+                </ul> */
 
-/* codigo html
-  <ul class="gallery">             </ul>
-<li><img src="./assets/img/goo.webp"><a href="https://www.printables.com/model/1178180-the-goonies-magnet-multi-color8x3mm-magnets" rel="noopener"><h4>The Goonies Magnet</h4></a></li>*/
+const menuCategorias = ["Arquitectura", "Arte", "Robotica", "Electrónica", "Juegos", "Juguetes", "Biologia", "Matematicas", "Oficina", "Varios"];
+const menu = document.querySelector('.navegador');
+const ulMenu= document.createElement('ul');
+menu.appendChild(ulMenu);
+const liMenuH2=document.createElement('li');
+liMenuH2.innerHTML+=`
+<h2>Categorias</h2>`;
+ulMenu.appendChild(liMenuH2);
 
+for(let categoria of menuCategorias){
+  const liMenu=document.createElement('li');
+  liMenu.innerHTML+=`
+  <a src="#">${categoria}</a>`
+  ulMenu.appendChild(liMenu);
+}
+
+/* 
+                <ul>
+          <li><a src="#">Modelos 3D</a></li>
+          <li><a src="#">Tienda</a></li>
+          <li><a src="#">Educación</a></li>
+          <li><a src="#">Marcas</a></li>
+          <li><a src="#">Comunidad</a></li>
+          <li><a src="#">Eventos</a></li>
+        </ul> */
+const nav= document.querySelector('nav');
+const ulNav= document.createElement('ul');
+nav.appendChild(ulNav);
+const menuNav = ["Modelos 3D", "Tienda", "Educación", "Marcas", "Comunidad", "Eventos"];
+for(let n of menuNav){
+  const liNav=document.createElement('li');
+  liNav.innerHTML+=`<a href="#">${n}</a>`;
+  ulNav.appendChild(liNav);
+}
+/* 
+<ul class="social">
+<li><a src="#"><img src="./assets/ico/linkedin.png"></a></li>
+<li><a src="#"><img src="./assets/ico/instagram.png"></a></li>
+<li><a src="#"><img src="./assets/ico/facebook.png"></a></li>
+</ul> */
+const footer=document.querySelector('footer');
+const ulSocial= document.createElement('ul');
+ulSocial.className='social';
+//console.log(ulSocial);
+const social={
+  Linkedin :{
+    name: 'Linkedin',
+    ico: './assets/ico/linkedin.png',
+    src: 'https://www.linkedin.com/in/aaron-gomez-abella-b6667174/'
+  },
+  Instagram : {
+    name: 'Instagram',
+    ico: './assets/ico/instagram.png',
+    src: 'https://www.instagram.com/pumukimak/'
+  },
+  Facebook :{
+    name: 'Facebook',
+    ico: './assets/ico/facebook.png',
+    src: 'https://www.facebook.com/busktlavida'
+  },
+  Github :{
+   name: 'Github',
+   ico: './assets/ico/github-mark-white.png',
+   src: 'https://github.com/AaronSGomez'
+ }   
+}
+
+footer.appendChild(ulSocial);
+for(let s in social){
+  const liSocial=document.createElement('li');
+  liSocial.innerHTML+=`
+  <a href="${social[s].src}" target="_blank" rel="noopener noreferrer"><img src="${social[s].ico}"></a>`;
+  ulSocial.appendChild(liSocial);
+}
