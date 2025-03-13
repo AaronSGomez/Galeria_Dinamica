@@ -69,16 +69,17 @@ const products = [
 
 /* GALERIA */
 const gallery = document.querySelector('.modelos');
-const ul= document.createElement('ul');
-gallery.appendChild(ul);
-ul.classList.add('gallery');
+const ulModelos= document.createElement('ul');
+gallery.appendChild(ulModelos);
+ulModelos.classList.add('gallery');
 for(let product of products){
   const li= document.createElement('li');
   li.innerHTML +=`
   <img src="${product.image}"><a href="${product.src}" rel="noopener"><h4>${product.name}</h4></a>
   `;
-  ul.appendChild(li);
+  ulModelos.appendChild(li);
 }
+
 /* NAV */
 const menuCategorias = ["Arquitectura", "Arte", "Robotica", "Electrónica", "Juegos", "Juguetes", "Biologia", "Matematicas", "Oficina", "Varios"];
 const menu = document.querySelector('.navegador');
@@ -95,6 +96,7 @@ for(let categoria of menuCategorias){
   <a href="#">${categoria}</a>`
   ulMenu.appendChild(liMenu);
 }
+
 /* MENU */
 const nav= document.querySelector('nav');
 const ulNav= document.createElement('ul');
@@ -142,18 +144,46 @@ for(let s in social){
   ulSocial.appendChild(liSocial);
 }
 
-/* <div class="buscar">
-            <button class= "btn"><img src="./assets/img/lupa.png" /></button>
-            <input type="text" class="search" placeholder="Buscar..." />
-          </div> */
-          /* hay que crear una funcion mostrar elementos a la que pasar un array de products que contengan la palabra de busqueda y pintarlos en la galeria */
+
+/* hay que crear una funcion mostrar elementos a la que pasar un array de products que contengan la palabra de busqueda y pintarlos en la galeria */
+mostrarBusqueda = (products, searchValue) => {
+  const gallery = document.querySelector('.modelos');
+  gallery.innerHTML = '';
+  const ulModelos= document.createElement('ul');
+
+  let count=0;
+  for(let product of products){
+    if(product.name.toLowerCase().includes(searchValue.toLowerCase())){
+      const li= document.createElement('li');
+      li.innerHTML +=`
+      <img src="${product.image}"><a href="${product.src}" rel="noopener"><h4>${product.name}</h4></a>
+      `;
+      ulModelos.appendChild(li);
+      count=1;
+    }
+  }
+  if(count==0){
+    const div= document.createElement('div');
+    div.classList.add('mensaje');
+    div.innerHTML+=`
+    <h2>No hay resultados, repite la busqueda o haz busqueda vacia para recargar elementos</h2>
+    `;
+    gallery.appendChild(div);
+    count=1;
+  }
+  gallery.appendChild(ulModelos);
+  ulModelos.classList.add('gallery');
+}
+
 const search=document.querySelector('.search');
 const btn=document.querySelector('.btn');
 let searchValue='';
 btn.addEventListener('click',()=>{
   searchValue= search.value;
-  console.log(search.value);
+  /* console.log(search.value); */
+  mostrarBusqueda(products, searchValue);
 });
+
 
 
 

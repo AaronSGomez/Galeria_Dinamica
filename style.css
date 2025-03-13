@@ -119,6 +119,9 @@ button > img {
   width: 23px;
   height: 23px;
 }
+.mensaje {
+  padding: 30px;
+}
 
 nav > ul {
   display: grid;
